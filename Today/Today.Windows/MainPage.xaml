@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Today.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Today"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    mc:Ignorable="d">
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/cartoon.jpg"
+                    Stretch="UniformToFill" />
+        </Grid.Background>
+        <TextBlock x:Name="Today" HorizontalAlignment="Left" Margin="36,34,0,0" TextWrapping="Wrap" Text="Today" VerticalAlignment="Top" Height="83" Width="215" FontSize="72"/>
+        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="184,308,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="72"/>
+    </Grid>
+</Page>
