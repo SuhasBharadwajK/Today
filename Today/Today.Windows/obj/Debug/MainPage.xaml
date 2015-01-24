@@ -14,7 +14,10 @@
                     Stretch="UniformToFill" />
         </Grid.Background>
         <TextBlock x:Name="Today" HorizontalAlignment="Left" Margin="36,34,0,0" TextWrapping="Wrap" Text="Today" VerticalAlignment="Top" Height="83" Width="215" FontSize="72"/>
-        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="184,308,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="72"/>
+        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="36,122,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="48"/>
+        <Canvas x:ConnectionId='1' x:Name="taskspace" HorizontalAlignment="Left" Height="500" Margin="36,209,0,0" VerticalAlignment="Top" Width="750"                >
+            <Image x:ConnectionId='2' x:Name="addplus" Height="100" Canvas.Left="325" Canvas.Top="200" Width="100" Source="Assets/addplus.png" Opacity="0.6"                />
+        </Canvas>
     </Grid>
 </Page>
 

@@ -19,12 +19,15 @@
     <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.exe">
       <PackagePath>Today.Windows.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\cartoon.jpg">
-      <PackagePath>Assets\cartoon.jpg</PackagePath>
+    <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\addplus.png">
+      <PackagePath>Assets\addplus.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\plusadd.png">
+      <PackagePath>Assets\plusadd.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
@@ -37,6 +40,9 @@
     <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\cartoon.jpg">
+      <PackagePath>Assets\cartoon.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>

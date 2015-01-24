@@ -63,5 +63,10 @@ namespace Today
                 return "th";
             }
         }
+
+        private void addRem(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }
