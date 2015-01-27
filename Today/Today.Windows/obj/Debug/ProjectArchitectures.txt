@@ -1,1 +1,1 @@
-c:\users\suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Today.Windows.csproj;neutral
+C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Today.Windows.csproj;neutral
