@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.exe">
       <PackagePath>Today.Windows.exe</PackagePath>
-      <Modified>2015-01-29T11:01:54.069</Modified>
+      <Modified>2015-01-29T19:14:44.367</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\addplus.png">
       <PackagePath>Assets\addplus.png</PackagePath>
@@ -74,11 +74,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-01-29T10:51:33.325</Modified>
+      <Modified>2015-01-29T19:05:55.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.xr.xml">
       <PackagePath>Today.Windows.xr.xml</PackagePath>
-      <Modified>2015-01-29T10:51:33.117</Modified>
+      <Modified>2015-01-29T19:05:55.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

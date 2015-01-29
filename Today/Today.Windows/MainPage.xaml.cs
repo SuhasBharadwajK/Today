@@ -37,6 +37,10 @@ namespace Today
     {
 
         List<string> months = new List<string> { "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
+        List<Rectangle> reminders = new List<Rectangle>();
+        List<TextBlock> remNames, remTimes = new List<TextBlock>();
+
+        int remNumber = 0;
 
         //Rectangle popuprem = new Rectangle();
         //DispatcherTimer dispatcherTimer;
@@ -193,8 +197,62 @@ namespace Today
             //eventName.Text = dispatcherTimer.IsEnabled.ToString();
         }
 
+        //Testthis thing:
         void createNew(object sender, RoutedEventArgs e)
         {
+            reminders.Add(new Rectangle());
+            reminders[remNumber].Height = 150;
+            reminders[remNumber].Width = 400;
+            reminders[remNumber].Fill = ColorOfRemGreey;
+            reminders[remNumber].Margin = new Thickness(100, 20, 0, 0);
+            reminders[remNumber].RadiusX = 15;
+            reminders[remNumber].RadiusY = 15;
+            reminders[remNumber].RenderTransform = new CompositeTransform();
+            reminders[remNumber].Name = "rem" + remNumber.ToString();
+
+            Canvas.SetLeft(reminders[remNumber], 0);
+            Canvas.SetTop(reminders[remNumber], 50);
+            Storyboard.SetTarget(slideInRem, reminders[remNumber]);
+            //reminders[remNumber]
+
+            taskspace.Children.Remove(((TextBox)taskspace.FindName("todo")));
+            taskspace.Children.Remove(((Button)taskspace.FindName("addNew")));
+            taskspace.Children.Remove(((Image)taskspace.FindName("closeButton")));
+            taskspace.Children.Remove(((TimePicker)taskspace.FindName("remTime")));
+            remContainer.Children.Add(reminders[remNumber]);
+            remNumber++;
+            if (remNumber > 2)
+            {
+                remContainer.Height += 170;
+            }
+
+            cancelPopup.Begin();
+            cancelPopup.Completed += delegate
+            {
+                
+                Canvas.SetZIndex(addplus, 5);
+                Canvas.SetZIndex(canceller, -15);
+                addplus.Visibility = Visibility.Visible;
+                addingTask = false;
+
+                
+
+                Canvas.SetLeft(addplus, 650);
+                Canvas.SetTop(addplus, 400);
+                addplus.Opacity = 1;
+                remadder.Visibility = Visibility.Collapsed;
+
+                //taskspace.Children.Add(reminders[remNumber]);
+                //remContainer.Children.Add(reminders[remNumber]);
+                //addingNewRem.Begin();
+                
+                //addingNewRem.Completed += delegate
+                //{
+                //    addingNewRem.Stop();
+                //};
+                //taskspace.Children.Remove(reminders[remNumber]);
+
+            };
             
         }
 
@@ -204,13 +262,15 @@ namespace Today
             if (addingTask)
             {
                 cancelPopup.Begin();
+                Canvas.SetZIndex(addplus, 5);
                 //taskspace.IsTapEnabled = true;
                 //await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => 
                 //{
                 //    Task.Delay(200);
                 //});
-                Canvas.SetZIndex(canceller, -15);
+                
                 //Canvas.SetZIndex(remadder, -15);
+                Canvas.SetZIndex(canceller, -15);
                 addplus.Visibility = Visibility.Visible;
                 addingTask = false;
                 //Task.Delay(1000);

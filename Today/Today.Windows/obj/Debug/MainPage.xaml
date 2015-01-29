@@ -10,6 +10,8 @@
 
     <Page.Resources>
         <SolidColorBrush Color="#de8282" x:Name="ColorOfPopUp" />
+        <SolidColorBrush Color="#FF47BD55" x:Name="ColorOfRem" />
+        <SolidColorBrush Color="#FFC7E2CA" x:Name="ColorOfRemGreey" />
         <Storyboard x:Name="popup">
             <DoubleAnimation Duration="0:0:0.4" To="750" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="remadder" d:IsOptimized="True">
                 <DoubleAnimation.EasingFunction>
@@ -41,7 +43,14 @@
             </DoubleAnimation>
             <DoubleAnimation Duration="0:0:0.4" To="1" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="remadder" d:IsOptimized="True">
                 <DoubleAnimation.EasingFunction>
-                    <ElasticEase EasingMode="EaseIn" Oscillations="1" Springiness="-2"/>
+                    <ElasticEase EasingMode="EaseIn" Oscillations="1" Springiness="-3"/>
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Name="addingNewRem">
+            <DoubleAnimation x:Name="slideInRem" Duration="0:0:0.7" To="50" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" d:IsOptimized="True">
+                <DoubleAnimation.EasingFunction>
+                    <ElasticEase EasingMode="EaseOut" Oscillations="1" Springiness="-7"/>
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
         </Storyboard>
@@ -54,16 +63,19 @@
         </Grid.Background>
 
         <TextBlock x:Name="Today" HorizontalAlignment="Left" Margin="36,34,0,0" TextWrapping="Wrap" Text="Today" VerticalAlignment="Top" Height="83" Width="215" FontSize="72"/>
-        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="36,122,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="36,122,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" FontSize="48"/>
         <Canvas x:Name="taskspace" HorizontalAlignment="Left" Height="500" Margin="36,209,0,0" VerticalAlignment="Top" Width="750">
-            <Image x:ConnectionId='2' x:Name="addplus" Height="100" Canvas.Left="325" Canvas.Top="200" Width="100" Source="Assets/addplus.png" Opacity="0.6"                />
+            <Image x:ConnectionId='2' x:Name="addplus" Height="100" Canvas.Left="325" Canvas.Top="200" Width="100" Source="Assets/addplus.png" Opacity="0.6"                 Canvas.ZIndex="5"/>
             <Rectangle x:Name="remadder" HorizontalAlignment="Left" Height="1" Stroke="{x:Null}" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="373" Canvas.Top="247" RadiusX="0.047" RadiusY="0.07" Fill="#FFECD8D8" Opacity="0.67" Visibility="Collapsed" >
                 <Rectangle.RenderTransform>
                     <CompositeTransform/>
                 </Rectangle.RenderTransform>
             </Rectangle>
+            <ScrollViewer x:Name="remViewer" Height="500" Width="750" Canvas.Left="0" Canvas.Top="0" VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled" HorizontalScrollBarVisibility="Hidden" HorizontalScrollMode="Enabled">
+                <StackPanel x:Name="remContainer" Height="500" Width="750" Orientation="Vertical"/>
+            </ScrollViewer>
         </Canvas>
-        <Rectangle x:ConnectionId='1' x:Name="canceller" HorizontalAlignment="Left" Height="3999" Margin="-398,-149,-2236,-3082" RadiusY="1" RadiusX="1" Stroke="{x:Null}" VerticalAlignment="Top" Width="4000" Canvas.ZIndex="-15"  Fill="Black" Opacity="0"                      />
+        <Rectangle x:ConnectionId='1' x:Name="canceller" HorizontalAlignment="Left" Height="3999" Margin="-392,-142,-2242,-3089" RadiusY="1" RadiusX="1" Stroke="{x:Null}" VerticalAlignment="Top" Width="4000" Canvas.ZIndex="-15"  Fill="Black" Opacity="0"                      />
         <TextBlock x:Name="TimerLog" HorizontalAlignment="Left" Margin="1275,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="7" Width="67" FontSize="20"/>
     </Grid>
 </Page>
