@@ -94,6 +94,7 @@ namespace Today
         {
             Canvas.SetLeft(remadder, Canvas.GetLeft(taskspace) + taskspace.Width / 2);
             Canvas.SetTop(remadder, Canvas.GetTop(taskspace) + taskspace.Height / 2);
+            remadder.Visibility = Visibility.Visible;
             //taskspace.IsTapEnabled = false;
             addingTask = true;
             //taskspace.Children.Add(popuprem);
@@ -124,14 +125,16 @@ namespace Today
             //    //dispatcherTimer.Tick += dispatcherTimerTick;
             //});
 
-            Button addNew = new Button();
-            addNew.Content = "Add";
-            addNew.Width = 100;
-            addNew.Height = 50;
-            addNew.Name = "addNew";
-            Canvas.SetLeft(addNew, 550);
-            Canvas.SetTop(addNew, 400);
-            Canvas.SetZIndex(addNew, 21);
+            DatePicker remDate = new DatePicker();
+
+            TextBox todo = new TextBox();
+            todo.Name = "todo";
+            todo.PlaceholderText = "Must do...";
+            todo.Height = 30;
+            todo.Width = 400;
+            Canvas.SetLeft(todo, 175);
+            Canvas.SetTop(todo, 50);
+            Canvas.SetZIndex(todo, 20);
 
             Image closeButton = new Image();
             closeButton.Source = new BitmapImage(new Uri("ms-appx:///Assets/closer.png"));
@@ -141,16 +144,27 @@ namespace Today
             Canvas.SetLeft(closeButton, 700);
             Canvas.SetTop(closeButton, 20);
             Canvas.SetZIndex(closeButton, 21);
+            closeButton.Tapped += cancelAdding;
 
-            TextBox todo = new TextBox();
-            todo.Name = "todo";
-            todo.PlaceholderText = "I must do what?";
-            todo.Height = 30;
-            todo.Width = 400;
-            Canvas.SetLeft(todo, 175);
-            Canvas.SetTop(todo, 50);
-            Canvas.SetZIndex(todo, 20);
+            Button addNew = new Button();
+            addNew.Content = "Add";
+            addNew.Width = 100;
+            addNew.Height = 50;
+            addNew.Name = "addNew";
+            Canvas.SetLeft(addNew, 550);
+            Canvas.SetTop(addNew, 400);
+            Canvas.SetZIndex(addNew, 21);
+            addNew.Click += createNew;
 
+            TimePicker remTime = new TimePicker();
+            remTime.Name = "remTime";
+            remTime.MinuteIncrement = 5;
+            remTime.Time = new TimeSpan(0, 0, 0);
+            remTime.ClockIdentifier = Windows.Globalization.ClockIdentifiers.TwelveHour;
+            remTime.Header = "When?";
+            Canvas.SetLeft(remTime, 175);
+            Canvas.SetTop(remTime, 100);
+            Canvas.SetZIndex(remTime, 21);
 
             Canvas.SetZIndex(addplus, -5);
             Canvas.SetZIndex(canceller, 5);
@@ -168,13 +182,20 @@ namespace Today
                 taskspace.Children.Remove(((TextBox)this.FindName("todo")));
                 taskspace.Children.Remove(((Button)this.FindName("addNew")));
                 taskspace.Children.Remove(((Image)this.FindName("closeButton")));
+                taskspace.Children.Remove(((TimePicker)this.FindName("remTime")));
                 taskspace.Children.Add(todo);
                 taskspace.Children.Add(addNew);
                 taskspace.Children.Add(closeButton);
+                taskspace.Children.Add(remTime);
             };
             //popup.AutoReverse = true;
 
             //eventName.Text = dispatcherTimer.IsEnabled.ToString();
+        }
+
+        void createNew(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private void cancelAdding(object sender, TappedRoutedEventArgs e)
@@ -198,10 +219,12 @@ namespace Today
                 taskspace.Children.Remove(((TextBox)taskspace.FindName("todo")));
                 taskspace.Children.Remove(((Button)taskspace.FindName("addNew")));
                 taskspace.Children.Remove(((Image)taskspace.FindName("closeButton")));
+                taskspace.Children.Remove(((TimePicker)taskspace.FindName("remTime")));
 
                 cancelPopup.Completed += delegate
                 {
                     addplus.Opacity = 1;
+                    remadder.Visibility = Visibility.Collapsed;
                 };
             }
         }

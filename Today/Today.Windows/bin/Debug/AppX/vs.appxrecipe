@@ -7,7 +7,7 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>80e39263-9ee8-4a17-81c8-f71c4f005dce</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\obj\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>F299FA93571BDCE5C30D73EBD0AD4243DF1425C711EADF87944B6E3A5B6D7BE7</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>80e39263-9ee8-4a17-81c8-f71c4f005dce_1.0.0.0_neutral__evbpqqwrht6rp</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>80e39263-9ee8-4a17-81c8-f71c4f005dce_evbpqqwrht6rp!App</RegisteredUserModeAppID>
@@ -17,70 +17,70 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-01-27T19:27:52.861</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.exe">
       <PackagePath>Today.Windows.exe</PackagePath>
-      <Modified>2015-01-27T19:34:03.568</Modified>
+      <Modified>2015-01-29T11:01:54.069</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\addplus.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\addplus.png">
       <PackagePath>Assets\addplus.png</PackagePath>
       <Modified>2015-01-24T17:09:54.563</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\close.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\close.png">
       <PackagePath>Assets\close.png</PackagePath>
       <Modified>2015-01-27T18:57:29.642</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\closer.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\closer.png">
       <PackagePath>Assets\closer.png</PackagePath>
       <Modified>2015-01-27T19:27:34.217</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T05:25:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\plusadd.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\plusadd.png">
       <PackagePath>Assets\plusadd.png</PackagePath>
       <Modified>2015-01-24T16:47:11.825</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T05:25:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T05:25:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T05:25:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\cartoon.jpg">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\cartoon.jpg">
       <PackagePath>Assets\cartoon.jpg</PackagePath>
       <Modified>2015-01-24T13:48:27.581</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
       <Modified>2015-01-24T14:42:40.791</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-01-27T19:32:23.215</Modified>
+      <Modified>2015-01-29T10:51:33.325</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.xr.xml">
       <PackagePath>Today.Windows.xr.xml</PackagePath>
-      <Modified>2015-01-27T19:32:22.896</Modified>
+      <Modified>2015-01-29T10:51:33.117</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <Modified>2015-01-27T19:27:52.715</Modified>
     </AppxPackagedFile>

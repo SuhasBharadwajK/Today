@@ -54,10 +54,10 @@
         </Grid.Background>
 
         <TextBlock x:Name="Today" HorizontalAlignment="Left" Margin="36,34,0,0" TextWrapping="Wrap" Text="Today" VerticalAlignment="Top" Height="83" Width="215" FontSize="72"/>
-        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="36,122,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="48"/>
+        <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="36,122,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" FontSize="48"/>
         <Canvas x:Name="taskspace" HorizontalAlignment="Left" Height="500" Margin="36,209,0,0" VerticalAlignment="Top" Width="750">
             <Image x:Name="addplus" Height="100" Canvas.Left="325" Canvas.Top="200" Width="100" Source="Assets/addplus.png" Opacity="0.6" Tapped="addRem"/>
-            <Rectangle x:Name="remadder" HorizontalAlignment="Left" Height="1" Stroke="{x:Null}" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="373" Canvas.Top="247" RadiusX="0.047" RadiusY="0.07" Fill="#FFECD8D8" Opacity="0.67" >
+            <Rectangle x:Name="remadder" HorizontalAlignment="Left" Height="1" Stroke="{x:Null}" VerticalAlignment="Top" Width="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="373" Canvas.Top="247" RadiusX="0.047" RadiusY="0.07" Fill="#FFECD8D8" Opacity="0.67" Visibility="Collapsed" >
                 <Rectangle.RenderTransform>
                     <CompositeTransform/>
                 </Rectangle.RenderTransform>

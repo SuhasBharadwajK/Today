@@ -70,6 +70,7 @@
       <RootProperty Name="Fill" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="RenderTransform" />
       <RootEvent Name="Tapped" />
     </RootType>

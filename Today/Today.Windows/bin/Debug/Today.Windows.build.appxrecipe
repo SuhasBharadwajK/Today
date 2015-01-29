@@ -7,59 +7,59 @@
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>80e39263-9ee8-4a17-81c8-f71c4f005dce</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\obj\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.exe">
       <PackagePath>Today.Windows.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\addplus.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\addplus.png">
       <PackagePath>Assets\addplus.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\close.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\close.png">
       <PackagePath>Assets\close.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\closer.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\closer.png">
       <PackagePath>Assets\closer.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\plusadd.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\plusadd.png">
       <PackagePath>Assets\plusadd.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\Assets\cartoon.jpg">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\Assets\cartoon.jpg">
       <PackagePath>Assets\cartoon.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\Today.Windows.xr.xml">
       <PackagePath>Today.Windows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Suhas\Documents\Visual Studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Suhas\documents\visual studio 2013\Projects\Today\Today\Today.Windows\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
