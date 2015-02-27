@@ -38,7 +38,11 @@ namespace Today
 
         List<string> months = new List<string> { "January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
         List<Rectangle> reminders = new List<Rectangle>();
-        List<TextBlock> remNames, remTimes = new List<TextBlock>();
+        List<TextBlock> remNames = new List<TextBlock>();
+        List<Canvas> remHolders = new List<Canvas>();
+        
+        //TextBox todo;
+        //TextBox remTime;
 
         int remNumber = 0;
 
@@ -94,6 +98,7 @@ namespace Today
             }
         }
 
+        //Is invoked when Plus is clicked.
         private void addRem(object sender, TappedRoutedEventArgs e)
         {
             Canvas.SetLeft(remadder, Canvas.GetLeft(taskspace) + taskspace.Width / 2);
@@ -148,7 +153,7 @@ namespace Today
             Canvas.SetLeft(closeButton, 700);
             Canvas.SetTop(closeButton, 20);
             Canvas.SetZIndex(closeButton, 21);
-            closeButton.Tapped += cancelAdding;
+            closeButton.Tapped += cancelAdding;            
 
             Button addNew = new Button();
             addNew.Content = "Add";
@@ -167,7 +172,7 @@ namespace Today
             remTime.ClockIdentifier = Windows.Globalization.ClockIdentifiers.TwelveHour;
             remTime.Header = "When?";
             Canvas.SetLeft(remTime, 175);
-            Canvas.SetTop(remTime, 100);
+            Canvas.SetTop(remTime, 120);
             Canvas.SetZIndex(remTime, 21);
 
             Canvas.SetZIndex(addplus, -5);
@@ -198,64 +203,142 @@ namespace Today
         }
 
         //Testthis thing:
+        //Is invoked when 'Add' button is clicked.
         void createNew(object sender, RoutedEventArgs e)
         {
-            reminders.Add(new Rectangle());
-            reminders[remNumber].Height = 150;
-            reminders[remNumber].Width = 400;
-            reminders[remNumber].Fill = ColorOfRemGreey;
-            reminders[remNumber].Margin = new Thickness(100, 20, 0, 0);
-            reminders[remNumber].RadiusX = 15;
-            reminders[remNumber].RadiusY = 15;
-            reminders[remNumber].RenderTransform = new CompositeTransform();
-            reminders[remNumber].Name = "rem" + remNumber.ToString();
-
-            Canvas.SetLeft(reminders[remNumber], 0);
-            Canvas.SetTop(reminders[remNumber], 50);
-            Storyboard.SetTarget(slideInRem, reminders[remNumber]);
-            //reminders[remNumber]
-
-            taskspace.Children.Remove(((TextBox)taskspace.FindName("todo")));
-            taskspace.Children.Remove(((Button)taskspace.FindName("addNew")));
-            taskspace.Children.Remove(((Image)taskspace.FindName("closeButton")));
-            taskspace.Children.Remove(((TimePicker)taskspace.FindName("remTime")));
-            remContainer.Children.Add(reminders[remNumber]);
-            remNumber++;
-            if (remNumber > 2)
+            if (((TextBox)taskspace.FindName("todo")).Text == "")
             {
-                remContainer.Height += 170;
+                TextBlock error = new TextBlock();
+                error.Text = "What exactly is the thing that you want to do?";
+                error.IsColorFontEnabled = true;
+                error.Foreground = Error;
+                error.Name = "error";
+                Canvas.SetTop(error, 250);
+                Canvas.SetLeft(error, 160);
+                Canvas.SetZIndex(error, 21);
+                error.FontSize = 22;
+                taskspace.Children.Remove(error);
+                taskspace.Children.Add(error);
             }
 
-            cancelPopup.Begin();
-            cancelPopup.Completed += delegate
+            else
             {
-                
-                Canvas.SetZIndex(addplus, 5);
-                Canvas.SetZIndex(canceller, -15);
-                addplus.Visibility = Visibility.Visible;
-                addingTask = false;
 
-                
+                remHolders.Add(new Canvas());
+                remHolders[remNumber].Height = 150;
+                remHolders[remNumber].Width = 400;
+                remHolders[remNumber].Margin = new Thickness(-100, 20, 0, 0);
 
-                Canvas.SetLeft(addplus, 650);
-                Canvas.SetTop(addplus, 400);
-                addplus.Opacity = 1;
-                remadder.Visibility = Visibility.Collapsed;
+                reminders.Add(new Rectangle());
+                //Date.Text = remNumber.ToString();
+                reminders[remNumber].Height = 150;
+                reminders[remNumber].Width = 400;
+                reminders[remNumber].Fill = ColorOfRemGreey;
+                //reminders[remNumber].Margin = new Thickness(-100, 20, 0, 0);
+                reminders[remNumber].RadiusX = 15;
+                reminders[remNumber].RadiusY = 15;
+                //Canvas.SetZIndex(reminders[remNumber], 2);
+                //reminders[remNumber].RenderTransform = new CompositeTransform();
+                reminders[remNumber].Name = "rem" + remNumber.ToString();
 
-                //taskspace.Children.Add(reminders[remNumber]);
+                remNames.Add(new TextBlock());
+                remNames[remNumber].Text = ((TextBox)taskspace.FindName("todo")).Text;
+                remNames[remNumber].Width = 300;
+                remNames[remNumber].Height = 50;
+                remNames[remNumber].FontSize = 30;
+                Canvas.SetLeft(remNames[remNumber], 50);
+                Canvas.SetTop(remNames[remNumber], 10);
+                //remNames[remNumber].Margin = new Thickness(0, 20, 0, 0);            
+
+                remHolders[remNumber].Children.Add(reminders[remNumber]);
+                remHolders[remNumber].Children.Add(remNames[remNumber]);
+
+                //Canvas.SetZIndex(remNames[remNumber], 3);
+                //remNames[remNumber].Margin = new Thickness
+
+                //remTimes.Add(new TextBlock());
+
+                //Canvas.SetLeft(reminders[remNumber], -100);
+                //Canvas.SetTop(reminders[remNumber], 50);
+                //Storyboard.SetTarget(slideInRem, reminders[remNumber]);
+                //reminders[remNumber]
+
+                taskspace.Children.Remove(((TextBox)taskspace.FindName("todo")));
+                taskspace.Children.Remove(((Button)taskspace.FindName("addNew")));
+                taskspace.Children.Remove(((Image)taskspace.FindName("closeButton")));
+                taskspace.Children.Remove(((TimePicker)taskspace.FindName("remTime")));
+                taskspace.Children.Remove(((TextBlock)taskspace.FindName("error")));
                 //remContainer.Children.Add(reminders[remNumber]);
-                //addingNewRem.Begin();
-                
-                //addingNewRem.Completed += delegate
-                //{
-                //    addingNewRem.Stop();
-                //};
-                //taskspace.Children.Remove(reminders[remNumber]);
+                //PageGrid.Children.Add(reminders[remNumber]);
 
-            };
-            
+                //remNumber++;
+                if (remNumber >= 2)
+                {
+                    remContainer.Height += 170;
+                }
+
+                cancelPopup.Begin();
+
+                addingNewRem.Completed += delegate
+                {
+                    addingNewRem.Stop();
+                };
+
+
+                //taskspace.Children.Remove(reminders[remNumber]);
+                //PageGrid.Children.Remove(reminders[remNumber]);
+                //taskspace.Children.Remove(remNames[remNumber]);
+                //PageGrid.Children.Remove(remNames[remNumber]);
+
+                taskspace.Children.Remove(remHolders[remNumber]);
+                PageGrid.Children.Remove(remHolders[remNumber]);
+
+                //remContainer.Children.Remove(reminders[remNumber]);
+                //reminders[remNumber].Margin = new Thickness(100, 20, 0, 0);
+                ////reminders[remNumber].Margin = new Thickness(0, 20, 0, 0);
+                remContainer.Children.Add(remHolders[remNumber]);
+                //remContainer.Children.Add(reminders[remNumber]);
+                remNumber++;
+
+                //remContainer.Children.Remove(reminders[remNumber]);
+
+                cancelPopup.Completed += delegate
+                {
+
+                    Canvas.SetZIndex(addplus, 5);
+                    Canvas.SetZIndex(canceller, -15);
+                    addplus.Visibility = Visibility.Visible;
+                    addingTask = false;
+
+
+
+                    Canvas.SetLeft(addplus, 650);
+                    Canvas.SetTop(addplus, 400);
+                    addplus.Opacity = 1;
+                    remadder.Visibility = Visibility.Collapsed;
+
+                    //taskspace.Children.Add(reminders[remNumber]);
+                    //remContainer.Children.Add(reminders[remNumber]);
+                    //remNumber++;               
+
+                    //addingNewRem.Begin(); // Enable this after uncommenting RenderTransform and Storyboard.SetTarget, to enable animation of adding.
+
+                    //addingNewRem.Completed += delegate
+                    //{
+                    //    addingNewRem.Stop();
+                    //};
+                    //taskspace.Children.Remove(reminders[remNumber]);
+
+                    //reminders[remNumber].Margin = new Thickness(100, 20, 0, 0);
+                    //reminders[remNumber].Margin = new Thickness(0, 20, 0, 0);
+                    //remContainer.Children.Add(reminders[remNumber]);
+                    //remNumber++;
+
+                };
+            }
         }
 
+        //Is invoked when red cross is clicked.
         private void cancelAdding(object sender, TappedRoutedEventArgs e)
         {
 
@@ -280,6 +363,7 @@ namespace Today
                 taskspace.Children.Remove(((Button)taskspace.FindName("addNew")));
                 taskspace.Children.Remove(((Image)taskspace.FindName("closeButton")));
                 taskspace.Children.Remove(((TimePicker)taskspace.FindName("remTime")));
+                taskspace.Children.Remove(((TextBlock)taskspace.FindName("error")));
 
                 cancelPopup.Completed += delegate
                 {
