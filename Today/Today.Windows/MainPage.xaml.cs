@@ -19,19 +19,34 @@ using System.Threading;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
+using Windows.Globalization;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Today
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    /// 
-    //public class TaskSpace : Canvas
-    //{
-
-    //}
+    /*
+     * Reference for names of objects and elements and what they do:
+     *  Static UIElements that are declared in the XAML code:
+     *      MainThing - The main page. All the other elements are its children. This is of type 'Page'.
+     *      PageGrid - The only child of MainThing and the parent of all the other elements except MainThing and itself. This of type 'Grid'.
+     *      Today - Text block that serves as the header to the app. It's value is initialized as "Today" and will not change. This of type 'TextBlock'
+     *      Date - Text block that shows the date and day of today as soon as the app starts. This is of type 'TextBlock'
+     *      tasksapce - The main element into which reminders are added. It has three children: addplus, remadder and remViewer. This is of type 'Canvas'.
+     *      canceller - This is not really important. The sole purpose of this is to close the popup when clicked anywhere outside it. This is of type 'Rectangle'.
+     *      TimerLog - This hasn't been used anywhere yet. This is of type 'TextBlock'.
+     *      addplus - This is grey colored plus sign seen when a reminder is to be added and is a child of taskspace. This is of type 'Image'.
+     *      remadder - The rectangle that pops up when the plus sign or addplus is clicked. This is of type 'Rectangle'.
+     *      remViewer - This is the child of taskspace that provides for scorllability for the reminders. This is of type 'ScrollViewer'.
+     *      remContainer - This is the child of remViewer and it is a container that hold all the reminders, vertically. This is of type 'StackPanel'.
+     *      
+     *  UIElements and objects that are created as the app starts and executes:
+     *      months - A List of strings that has the months arranges in order. This is for getting the month name as a string for updating Date on the app page. This is of type 'List<string>'.
+     *      reminders - A List of rectangles that are the actual reminders. Each object of this list is a child of corresponding Canvas object of remHolders This is of type 'List<rectangle>'.
+     *      remNames - A list of text blocks that has the names or information of the reminders in the order they are created. This is of type 'List<TextBlock>'.
+     *      remHolders - A list of Canvas objects whose children are objects at corresponding indexes of reminders and remNames.  This is of type 'List<Canvas>'.
+     *      
+     */
 
     public sealed partial class MainPage : Page
     {
@@ -44,7 +59,7 @@ namespace Today
         //TextBox todo;
         //TextBox remTime;
 
-        int remNumber = 0;
+        int remNumber = 0; /*The number of reminders added for a day.*/
 
         //Rectangle popuprem = new Rectangle();
         //DispatcherTimer dispatcherTimer;
@@ -56,11 +71,16 @@ namespace Today
         //int flag = 0;
         
 
-        bool addingTask = false;
+        bool addingTask = false; /*Shows if the pop up for adding a reminder is open or not.*/
 
         public MainPage()
         {
             this.InitializeComponent();
+
+            Canvas.SetZIndex(remadder, 10);
+            DateTime today = DateTime.Now;
+
+            Date.Text = today.DayOfWeek.ToString() + ", " + today.Day.ToString() + giveType(today.Day.ToString().Substring(today.Day.ToString().Length - 1)) + " of " + months[today.Month - 1];
 
             //eventName.PlaceholderText = "Name of the event";
             //eventName.Height = 30;
@@ -70,14 +90,14 @@ namespace Today
             //var res = new Today1();
             //res.todaysDate = new DateTime.Now;
             //remadder.Tapped += cancelAdding;
-            Canvas.SetZIndex(remadder, 10);
-            DateTime today = DateTime.Now;
+            
             //Date.Text = today.DayOfWeek.ToString() + ", " + today.Day.ToString() + daytype + " of ";
-            Date.Text = today.DayOfWeek.ToString() + ", " + today.Day.ToString() + giveType(today.Day.ToString().Substring(today.Day.ToString().Length - 1)) + " of " + months[today.Month - 1];
+            
             //Date.Text = today.DayOfYear.ToString();
             
         }
 
+        /*This method is used for writing the suffix for the date in the Date*/
         private string giveType(string a)
         {
             if (a == "1")
@@ -98,7 +118,7 @@ namespace Today
             }
         }
 
-        //Is invoked when Plus is clicked.
+        /*This method is 'Tapped' event handler for addplus.*/
         private void addRem(object sender, TappedRoutedEventArgs e)
         {
             Canvas.SetLeft(remadder, Canvas.GetLeft(taskspace) + taskspace.Width / 2);
@@ -135,6 +155,7 @@ namespace Today
             //});
 
             DatePicker remDate = new DatePicker();
+            Calendar cal = new Calendar();
 
             TextBox todo = new TextBox();
             todo.Name = "todo";
